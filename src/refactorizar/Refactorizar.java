@@ -7,11 +7,11 @@ package refactorizar;
 public class Refactorizar {
 
     public static void main(String[] args) {
-        boolean primo = false;
-        int numDigitos = 0;
-        int ndigitos = 0;
-        numDigitos = 2;
-        if (numDigitos <= 0) {
+        boolean esPrimo = false;
+        int longitudDigitos = 0;
+        int contadorDigitos = 0;
+        longitudDigitos = 2;
+        if (longitudDigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
         for (int i = 1; i <= 99999; i++) {
@@ -21,13 +21,13 @@ public class Refactorizar {
                 divisionEntera = divisionEntera / 10;
                 contador++;
             }
-            ndigitos = contador;
-            if (ndigitos == numDigitos) {
+            contadorDigitos = contador;
+            if (contadorDigitos == longitudDigitos) {
                 if (i < 4) {
-                    primo = true;
+                    esPrimo = true;
                 } else {
                     if (i % 2 == 0) {
-                        primo = false;
+                        esPrimo = false;
                     } else {
                         int contador1 = 0;
                         int i1 = 1;
@@ -45,11 +45,11 @@ public class Refactorizar {
                             }
                         }
                         if (contador1 == 1) {
-                            primo = true;
+                            esPrimo = true;
                         }
                     }
                 }
-                if (primo == true) {
+                if (esPrimo == true) {
                     System.out.println(i);
                 }
             }
